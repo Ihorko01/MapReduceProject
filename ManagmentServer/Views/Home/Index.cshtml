@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("Manage", "Manage", FormMethod.Post, new { encType = "multipart/form-data" }))
+{
+    <input id="FileName" name="FileName" class="from-control" placeholder="File Name" />
+
+    <input id="FileUpload" name="FileUpload" class="from-control" type="file" />
+    <button class="btn btn-danger" type="submit" onclick="return DisplayProgressMessage(this, 'Saving...');">Add</button>
+}
